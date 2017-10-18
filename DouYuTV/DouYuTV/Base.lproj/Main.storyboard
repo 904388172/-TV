@@ -52,9 +52,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="5nV-sl-Wql" kind="relationship" relationship="viewControllers" id="yjY-Sk-pFj"/>
                         <segue destination="MFC-Jd-yw6" kind="relationship" relationship="viewControllers" id="I4j-cc-maF"/>
                         <segue destination="908-zN-2g6" kind="relationship" relationship="viewControllers" id="0dk-F7-zAV"/>
+                        <segue destination="5nV-sl-Wql" kind="relationship" relationship="viewControllers" id="yjY-Sk-pFj"/>
                         <segue destination="cGj-cC-6n3" kind="relationship" relationship="viewControllers" id="Whj-En-RF6"/>
                     </connections>
                 </tabBarController>
