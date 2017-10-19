@@ -14,13 +14,15 @@ class PageContentView: UIView {
 
     //MARK: - 定义属性
     private var childVcs: [UIViewController]
-    private var parentViewController: UIViewController
+    private weak var parentViewController: UIViewController?
     
     //MARK: - 懒加载属性(闭包形式)
     private lazy var collectionView: UICollectionView = {
+        [weak self] in  //防止强引用(闭包里面使用self时)
        //创建layout
         var layout = UICollectionViewFlowLayout()
-        layout.itemSize = self.bounds.size
+        //强制解包
+        layout.itemSize = (self?.bounds.size)!
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
         layout.scrollDirection = .horizontal
@@ -31,8 +33,6 @@ class PageContentView: UIView {
         collectionView.isPagingEnabled = true
         collectionView.bounces = false
         
-        collectionView.backgroundColor = UIColor.red
-        
         collectionView.dataSource = self
         //注册collection
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: contentCellID)
@@ -41,7 +41,7 @@ class PageContentView: UIView {
     }()
     
     //MARK: - 自定义构造函数
-    init(frame: CGRect, childVcs: [UIViewController], parentViewController: UIViewController) {
+    init(frame: CGRect, childVcs: [UIViewController], parentViewController: UIViewController?) {
         self.childVcs = childVcs
         self.parentViewController = parentViewController
         super.init(frame: frame)
@@ -59,7 +59,7 @@ extension PageContentView {
     private func setUpUI() {
         //1.将所有的子控制器添加到父控制器中
         for childVc in childVcs {
-            parentViewController.addChildViewController(childVc)
+            parentViewController?.addChildViewController(childVc)
         }
         
         //2.添加UICollectionView，用于在cell中存放控制器的view
