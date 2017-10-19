@@ -13,7 +13,18 @@ class MainViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        addChildVc(storyName: "Home")
+        addChildVc(storyName: "Live")
+        addChildVc(storyName: "Follow")
+        addChildVc(storyName: "Profile")
+    }
+    
+    private func addChildVc(storyName: String) {
+        //通过storyBoard获取控制器
+        let childVc = UIStoryboard(name: storyName, bundle: nil).instantiateInitialViewController()!
+        
+        //将childVc作为子控制器
+        addChildViewController(childVc)
     }
 
     override func didReceiveMemoryWarning() {
