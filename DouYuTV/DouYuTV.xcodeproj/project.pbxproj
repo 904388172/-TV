@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		44495B671F982F61009FEE9E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44495B661F982F61009FEE9E /* HomeViewController.swift */; };
-		44495B6A1F983062009FEE9E /* UIBarButtonExternsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44495B691F983062009FEE9E /* UIBarButtonExternsion.swift */; };
+		44495B6A1F983062009FEE9E /* UIBarButton-Externsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44495B691F983062009FEE9E /* UIBarButton-Externsion.swift */; };
 		44495B6C1F9832F3009FEE9E /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44495B6B1F9832F3009FEE9E /* PageTitleView.swift */; };
 		44495B6E1F98349D009FEE9E /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44495B6D1F98349D009FEE9E /* Common.swift */; };
+		44495B701F9840CC009FEE9E /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44495B6F1F9840CC009FEE9E /* PageContentView.swift */; };
+		44495B721F98439C009FEE9E /* UIColer-Externsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44495B711F98439C009FEE9E /* UIColer-Externsion.swift */; };
 		444D8CFA1F9750D900BB8453 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444D8CF91F9750D900BB8453 /* AppDelegate.swift */; };
 		444D8D011F9750D900BB8453 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 444D8D001F9750D900BB8453 /* Assets.xcassets */; };
 		444D8D041F9750D900BB8453 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 444D8D021F9750D900BB8453 /* LaunchScreen.storyboard */; };
@@ -24,9 +26,11 @@
 
 /* Begin PBXFileReference section */
 		44495B661F982F61009FEE9E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		44495B691F983062009FEE9E /* UIBarButtonExternsion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBarButtonExternsion.swift; sourceTree = "<group>"; };
+		44495B691F983062009FEE9E /* UIBarButton-Externsion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButton-Externsion.swift"; sourceTree = "<group>"; };
 		44495B6B1F9832F3009FEE9E /* PageTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
 		44495B6D1F98349D009FEE9E /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		44495B6F1F9840CC009FEE9E /* PageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
+		44495B711F98439C009FEE9E /* UIColer-Externsion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColer-Externsion.swift"; sourceTree = "<group>"; };
 		444D8CF61F9750D900BB8453 /* DouYuTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouYuTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		444D8CF91F9750D900BB8453 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		444D8D001F9750D900BB8453 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -54,7 +58,8 @@
 		44495B681F983020009FEE9E /* Externsion */ = {
 			isa = PBXGroup;
 			children = (
-				44495B691F983062009FEE9E /* UIBarButtonExternsion.swift */,
+				44495B691F983062009FEE9E /* UIBarButton-Externsion.swift */,
+				44495B711F98439C009FEE9E /* UIColer-Externsion.swift */,
 			);
 			path = Externsion;
 			sourceTree = "<group>";
@@ -195,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				44495B6B1F9832F3009FEE9E /* PageTitleView.swift */,
+				44495B6F1F9840CC009FEE9E /* PageContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -300,9 +306,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44495B6A1F983062009FEE9E /* UIBarButtonExternsion.swift in Sources */,
+				44495B6A1F983062009FEE9E /* UIBarButton-Externsion.swift in Sources */,
 				444D8CFA1F9750D900BB8453 /* AppDelegate.swift in Sources */,
+				44495B721F98439C009FEE9E /* UIColer-Externsion.swift in Sources */,
 				44495B6C1F9832F3009FEE9E /* PageTitleView.swift in Sources */,
+				44495B701F9840CC009FEE9E /* PageContentView.swift in Sources */,
 				444D8D1F1F9753BA00BB8453 /* MainViewController.swift in Sources */,
 				44495B6E1F98349D009FEE9E /* Common.swift in Sources */,
 				44495B671F982F61009FEE9E /* HomeViewController.swift in Sources */,

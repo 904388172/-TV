@@ -48,14 +48,14 @@ class PageTitleView: UIView {
 //Mark: - 扩展view
 extension PageTitleView {
     private func setUpUI() {
-        //添加UIScrollView
+        //1.添加UIScrollView
         addSubview(scrollView)
         scrollView.frame = bounds
         
-        //添加title对应的label
+        //2.添加title对应的label
         setUpTitleLabels()
         
-        //设置底线和滚动滑块
+        //3.设置底线和滚动滑块
         setUpBottomMenuAndScrollLine()
     }
     
