@@ -11,29 +11,36 @@ private let kTitleViewH: CGFloat = 40
 
 class HomeViewController: UIViewController {
 
+    let titles = ["推荐","游戏","娱乐","趣玩","sss","fsa","asfab","afewe"]
+    
     //MARK: - 懒记载属性(闭包的形式)
     private lazy var pageTitleView: PageTitleView = {
+        [weak self] in
         let titleFrame = CGRect(x: 0, y: kStatebarH + kNavigationBarH, width: kScreenW, height: kTitleViewH)
-        let titles = ["推荐","游戏","娱乐","趣玩"]
         let titleView = PageTitleView(frame: titleFrame, titles: titles)
+        titleView.delegate = self
         return titleView
     }()
     
     //MARK: - 懒记载
     private lazy var pageContentView: PageContentView = {
         [weak self] in
-        let contentH = kScreenH - kStatebarH - kNavigationBarH - kTitleViewH
+        let contentH = kScreenH - kStatebarH - kNavigationBarH - kTitleViewH - kTabbarH
         let contentFrame = CGRect(x: 0, y: kStatebarH + kNavigationBarH + kTitleViewH, width: kScreenW, height: contentH)
         
         //确定所有的子控件
         var childVcs = [UIViewController]()
-        for _ in 0..<4 {
+        //将创建的控制器加到控制器数组中
+        childVcs.append(RecommendViewController())
+        
+        for _ in 0..<(titles.count - childVcs.count) {
             let vc = UIViewController()
             vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
             childVcs.append(vc)
         }
         
         let contentView = PageContentView(frame: contentFrame, childVcs: childVcs, parentViewController: self)
+        contentView.delegate = self
         return contentView
     }()
     
@@ -90,4 +97,18 @@ extension HomeViewController {
     }
 }
 
+//MARK: - 遵守PageTitleViewDelegate协议
+extension HomeViewController: PageTitleViewDelegate {
+    func pageTitleView(titelView: PageTitleView, selextedIndex index: Int) {
+        pageContentView.setCurrentIndex(currentIndex: index)
+        
+    }
+}
+
+//MARK: - 遵守PageTContentViewDelegate协议
+extension HomeViewController: PageContentViewDelegate {
+    func pageContentView(cintentView: PageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int) {
+        pageTitleView.setTitleWithProgress(progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
+    }
+}
 
