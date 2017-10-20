@@ -71,7 +71,17 @@ class RecommendViewController: UIViewController {
         //设置UI界面
         setUpUI()
         
+        //发送网络请求
         
+    }
+}
+
+//MARK: - 请求数据
+extension RecommendViewController {
+    private func loadData() {
+        NetworkTools.requestData(type: .GET, URLString: "https://httpbin.org/post", parameters: ["name":"why"]) { (result) in
+            print(result)
+        }
     }
 }
 

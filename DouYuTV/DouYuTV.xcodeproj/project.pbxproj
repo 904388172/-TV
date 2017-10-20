@@ -29,6 +29,7 @@
 		444D8D321F9756DC00BB8453 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 444D8D301F9756DC00BB8453 /* Profile.storyboard */; };
 		444D8D351F9756FC00BB8453 /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 444D8D331F9756FC00BB8453 /* Follow.storyboard */; };
 		444D8D381F97570A00BB8453 /* Live.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 444D8D361F97570A00BB8453 /* Live.storyboard */; };
+		446B704E1F99D7030050353B /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446B704D1F99D7030050353B /* NetworkTools.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		444D8D311F9756DC00BB8453 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DouYuTV/Base.lproj/Profile.storyboard; sourceTree = SOURCE_ROOT; };
 		444D8D341F9756FC00BB8453 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DouYuTV/Base.lproj/Follow.storyboard; sourceTree = SOURCE_ROOT; };
 		444D8D371F97570A00BB8453 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DouYuTV/Base.lproj/Live.storyboard; sourceTree = SOURCE_ROOT; };
+		446B704D1F99D7030050353B /* NetworkTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				44495B681F983020009FEE9E /* Externsion */,
+				446B704D1F99D7030050353B /* NetworkTools.swift */,
 				44495B6D1F98349D009FEE9E /* Common.swift */,
 			);
 			path = Tools;
@@ -341,6 +344,7 @@
 				44495B6E1F98349D009FEE9E /* Common.swift in Sources */,
 				44495B7F1F989964009FEE9E /* CollectionPrettyCell.swift in Sources */,
 				44495B7B1F98954F009FEE9E /* CollectionNormalCell.swift in Sources */,
+				446B704E1F99D7030050353B /* NetworkTools.swift in Sources */,
 				44495B671F982F61009FEE9E /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
