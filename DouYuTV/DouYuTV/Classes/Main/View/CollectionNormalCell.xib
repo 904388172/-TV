@@ -71,6 +71,12 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="288" height="230"/>
+            <connections>
+                <outlet property="iconImageView" destination="ROa-AD-AsO" id="0DI-Y0-xKC"/>
+                <outlet property="nickNameLabel" destination="Iuf-KT-NbX" id="rUl-gS-Alq"/>
+                <outlet property="onlineBtn" destination="Dg6-4Y-PPc" id="QAd-P7-hnJ"/>
+                <outlet property="roomNameLabel" destination="SdZ-Wl-U5B" id="XK6-85-co9"/>
+            </connections>
             <point key="canvasLocation" x="-85" y="144"/>
         </collectionViewCell>
     </objects>

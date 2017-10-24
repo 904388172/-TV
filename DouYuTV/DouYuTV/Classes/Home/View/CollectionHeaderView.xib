@@ -12,11 +12,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR">
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="CollectionHeaderView" customModule="DouYuTV" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="342" height="50"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3h1-fV-Jew">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3h1-fV-Jew" customClass="CollectionHeaderView" customModule="DouYuTV" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="342" height="10"/>
                     <color key="backgroundColor" red="0.91764705882352937" green="0.91764705882352937" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -60,6 +60,10 @@
                 <constraint firstItem="DLd-TC-429" firstAttribute="centerY" secondItem="qZN-md-62W" secondAttribute="centerY" id="yA1-4Q-XmA"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <connections>
+                <outlet property="iconImageView" destination="qZN-md-62W" id="y2H-6m-lsD"/>
+                <outlet property="titlelabel" destination="DLd-TC-429" id="Bxe-EB-zSv"/>
+            </connections>
             <point key="canvasLocation" x="23" y="54"/>
         </collectionReusableView>
     </objects>
