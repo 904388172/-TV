@@ -11,7 +11,7 @@ private let kTitleViewH: CGFloat = 40
 
 class HomeViewController: UIViewController {
 
-    let titles = ["推荐","游戏","娱乐","趣玩","sss","fsa","asfab","afewe"]
+    let titles = ["推荐","游戏","娱乐","趣玩"]
     
     //MARK: - 懒记载属性(闭包的形式)
     private lazy var pageTitleView: PageTitleView = {

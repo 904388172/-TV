@@ -28,7 +28,6 @@ class NetworkTools {
                 print(response.result.error!)
                 return
             }
-//            print(result)
             //将结果回调出去
             finishedCallback(result)
         }

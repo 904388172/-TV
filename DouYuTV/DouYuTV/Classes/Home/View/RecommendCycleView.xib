@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RecommendCycleView" customModule="DouYuTV" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="646" height="286"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="UpT-6c-QNS">
+                    <rect key="frame" x="0.0" y="0.0" width="646" height="286"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="k56-hH-2bt">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="tn4-KO-0MG"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="6Xd-Yn-PJx"/>
+                    </connections>
+                </collectionView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="S9T-Mf-dpx">
+                    <rect key="frame" x="597" y="252" width="39" height="37"/>
+                    <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="currentPageIndicatorTintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </pageControl>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="QAB-Wb-zp1" firstAttribute="bottom" secondItem="UpT-6c-QNS" secondAttribute="bottom" id="LRI-E5-BwA"/>
+                <constraint firstItem="UpT-6c-QNS" firstAttribute="leading" secondItem="QAB-Wb-zp1" secondAttribute="leading" id="Lyd-Y5-vAK"/>
+                <constraint firstItem="QAB-Wb-zp1" firstAttribute="trailing" secondItem="UpT-6c-QNS" secondAttribute="trailing" id="Y92-jv-96x"/>
+                <constraint firstItem="QAB-Wb-zp1" firstAttribute="trailing" secondItem="S9T-Mf-dpx" secondAttribute="trailing" constant="10" id="oCy-KZ-XK9"/>
+                <constraint firstItem="QAB-Wb-zp1" firstAttribute="bottom" secondItem="S9T-Mf-dpx" secondAttribute="bottom" constant="-3" id="xT2-a9-Vts"/>
+                <constraint firstItem="UpT-6c-QNS" firstAttribute="top" secondItem="QAB-Wb-zp1" secondAttribute="top" id="ySY-wp-9BJ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="QAB-Wb-zp1"/>
+            <connections>
+                <outlet property="collectionView" destination="UpT-6c-QNS" id="pFq-Qn-h5w"/>
+                <outlet property="pageControl" destination="S9T-Mf-dpx" id="rph-5i-SbF"/>
+            </connections>
+            <point key="canvasLocation" x="-48" y="-61"/>
+        </view>
+    </objects>
+</document>
