@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionGameCell" customModule="DouYuTV" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="80" height="90"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="80" height="90"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="英雄联盟" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRS-NE-Mgq">
+                        <rect key="frame" x="16" y="65.5" width="49.5" height="14.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="FPo-bU-c8y"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rLH-ce-V3k">
+                        <rect key="frame" x="18" y="15" width="45" height="45.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="rLH-ce-V3k" secondAttribute="height" multiplier="1:1" id="r9I-lD-DTi"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <real key="value" value="22.5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="sRS-NE-Mgq" firstAttribute="top" secondItem="rLH-ce-V3k" secondAttribute="bottom" constant="5" id="1bf-hi-czQ"/>
+                <constraint firstItem="rLH-ce-V3k" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="FUM-Vl-nq8"/>
+                <constraint firstItem="sRS-NE-Mgq" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="IV5-kK-N4q"/>
+                <constraint firstItem="rLH-ce-V3k" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="RtS-fT-PjH"/>
+                <constraint firstAttribute="bottom" secondItem="sRS-NE-Mgq" secondAttribute="bottom" constant="10" id="jMJ-0J-14H"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="81" height="77"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="iconImageView" destination="rLH-ce-V3k" id="PLo-Vc-cSM"/>
+                <outlet property="titleLabel" destination="sRS-NE-Mgq" id="rnS-Ud-hVf"/>
+            </connections>
+            <point key="canvasLocation" x="42" y="130"/>
+        </collectionViewCell>
+    </objects>
+</document>
