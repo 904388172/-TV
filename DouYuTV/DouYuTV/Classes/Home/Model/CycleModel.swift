@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CycleModel: NSObject {
+class CycleModel: BaseGameModel {
     /**
      swift 4.0字典转模型时需要在变量前面家@objc，不然会转不成功
      */
@@ -27,13 +27,14 @@ class CycleModel: NSObject {
     //主播信息对应的模型对象
     var ancher: AncherModel?
     
-    init(dict: [String: NSObject]) {
-        super.init()
-        
-        setValuesForKeys(dict)
-    }
-    
-    //防止出错，重写该方法（有些数据没有转）
-    override func setValue(_ value: Any?, forUndefinedKey key: String) {}
+//    //基类已经有了
+//    init(dict: [String: NSObject]) {
+//        super.init()
+//        
+//        setValuesForKeys(dict)
+//    }
+//    
+//    //防止出错，重写该方法（有些数据没有转）
+//    override func setValue(_ value: Any?, forUndefinedKey key: String) {}
     
 }

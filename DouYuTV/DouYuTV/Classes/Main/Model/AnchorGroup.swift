@@ -9,7 +9,7 @@
 import UIKit
 
 //主播模型
-class AnchorGroup: NSObject {
+class AnchorGroup: BaseGameModel {
     /**
      swift 4.0字典转模型时需要在变量前面家@objc，不然会转不成功
      */
@@ -22,27 +22,27 @@ class AnchorGroup: NSObject {
             }
         }
     }
-    //标题
-    @objc var tag_name: String = ""
+//    //标题
+//    @objc var tag_name: String = ""
     //组图标
     @objc var icon_name: String = "home_header_normal"
-    //游戏对应的图标
-    @objc var icon_url: String = ""
+//    //游戏对应的图标
+//    @objc var icon_url: String = ""
     
     //定义主播的模型对象数组（默认不转）
     lazy var anchers: [AncherModel] = [AncherModel]()
     
-    init(dict: [String: NSObject]) {
-        super.init()
-        
-        setValuesForKeys(dict)
-    }
-    //重写构造函数
-    override init() {
-    }
-    
-    //防止出错，重写该方法
-    override func setValue(_ value: Any?, forUndefinedKey key: String) {}
+//    init(dict: [String: NSObject]) {
+//        super.init()
+//        
+//        setValuesForKeys(dict)
+//    }
+//    //重写构造函数
+//    override init() {
+//    }
+//    
+//    //防止出错，重写该方法
+//    override func setValue(_ value: Any?, forUndefinedKey key: String) {}
     
     
     /*

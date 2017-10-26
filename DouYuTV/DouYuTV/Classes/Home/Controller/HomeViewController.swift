@@ -32,7 +32,10 @@ class HomeViewController: UIViewController {
         var childVcs = [UIViewController]()
         //将创建的控制器加到控制器数组中
         childVcs.append(RecommendViewController())
+        childVcs.append(GameViewController())
         
+        
+        //随机设置颜色
         for _ in 0..<(titles.count - childVcs.count) {
             let vc = UIViewController()
             vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))

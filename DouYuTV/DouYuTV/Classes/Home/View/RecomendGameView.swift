@@ -78,7 +78,7 @@ extension RecomendGameView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kGameCellID, for: indexPath) as! CollectionGameCell
         
-        cell.group = groups![indexPath.item]
+        cell.baseGame = groups![indexPath.item]
         
 //        cell.backgroundColor = indexPath.item % 2 == 0 ? UIColor.red : UIColor.green
         
@@ -87,19 +87,5 @@ extension RecomendGameView: UICollectionViewDataSource {
 }
 //MARK: - 遵守uicollectionView的代理协议
 extension RecomendGameView: UICollectionViewDelegate {
-//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        //获取滚动的偏移量(滚动超过一半就改变pageControl)
-//        let offsetX = scrollView.contentOffset.x + scrollView.bounds.width * 0.5
-//
-//        //计算pageControl的currentIndex
-//        pageControl.currentPage = Int(offsetX / scrollView.bounds.width) % (cycleModels?.count ?? 1)
-//    }
-//
-//    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-//        removeCycleTimer()
-//    }
-//
-//    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-//        addCycleTimer()
-//    }
+    
 }

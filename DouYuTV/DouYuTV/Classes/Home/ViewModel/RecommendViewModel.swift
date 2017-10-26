@@ -6,6 +6,10 @@
 //  Copyright © 2017年 Demo. All rights reserved.
 //
 
+/**
+     推荐界面的数据模型
+ */
+
 import UIKit
 
 class RecommendViewModel {
