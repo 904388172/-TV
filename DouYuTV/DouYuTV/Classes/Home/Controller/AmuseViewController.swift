@@ -13,6 +13,7 @@ private let kItemMargin: CGFloat = 10
 private let kItemW: CGFloat = (kScreenW - 3*kItemMargin) / 2
 private let kNormalItemH: CGFloat = kItemW * 3 / 4
 private let kHeaderViewH: CGFloat = 50
+private let kMenuViewH: CGFloat = 200
 
 private let kNormalCellID = "kNormalCellID"
 private let kPrettyCellID = "kPrettyCellID"
@@ -55,8 +56,17 @@ class AmuseViewController: UIViewController {
         //使用Xib注册headerView
         collectionView.register(UINib(nibName: "CollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kHeaderViewID)
         
+        //collectionView设置内边距
+        collectionView.contentInset = UIEdgeInsets(top: kMenuViewH, left: 0, bottom: 0, right: 0)
         
         return collectionView
+    }()
+    
+    private lazy var menuView: MenuView = {
+        let menuView = MenuView.menuView()
+        menuView.frame = CGRect(x: 0, y: -kMenuViewH, width: kScreenW, height: kMenuViewH)
+        
+        return menuView
     }()
     
     override func viewDidLoad() {
@@ -81,6 +91,19 @@ extension AmuseViewController {
         //请求娱乐数据
         amuseVM.requestAmuseData {
             self.collectionView.reloadData()
+            
+            
+            //处理数据(删除最热)
+            var tempGroups = self.amuseVM.amuses
+            tempGroups.append(tempGroups.first!)
+            tempGroups.append(tempGroups.first!)
+            tempGroups.append(tempGroups.first!)
+            tempGroups.append(tempGroups.first!)
+            tempGroups.append(tempGroups.first!)
+            
+            tempGroups.removeFirst()
+            //数据传给menuView
+            self.menuView.groups = tempGroups
         }
     }
 }
@@ -88,8 +111,11 @@ extension AmuseViewController {
 //MARK: - 设置UI界面
 extension AmuseViewController {
     func setUpUI() {
-        view.addSubview(collectionView)
         //
+        view.addSubview(collectionView)
+        
+        //menuView添加到collectionView
+        collectionView.addSubview(menuView)
     }
 }
 

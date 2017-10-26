@@ -34,6 +34,7 @@ class HomeViewController: UIViewController {
         childVcs.append(RecommendViewController())
         childVcs.append(GameViewController())
         childVcs.append(AmuseViewController())
+        childVcs.append(FunnyViewController())
         
         
         //随机设置颜色
