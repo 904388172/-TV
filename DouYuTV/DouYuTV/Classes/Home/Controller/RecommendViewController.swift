@@ -100,11 +100,21 @@ extension RecommendViewController {
     private func loadData() {
         //MVVM 模式获取网络请求
         recomendVM.requestData {
-            //展示推荐数据
+            //1.展示推荐数据
             self.collectionView.reloadData()
             
-            //将数据传递个GameView
-            self.gameView.groups = self.recomendVM.ancherGroups
+            //2.将数据传递个GameView
+            var groups = self.recomendVM.ancherGroups
+            //2.1.先移除前两组数据
+            groups.removeFirst()
+            groups.removeFirst()
+            
+            //2.2添加更多组
+            let moreGroup = AnchorGroup()
+            moreGroup.tag_name = "更多"
+            groups.append(moreGroup)
+            
+            self.gameView.groups = groups
         }
         
         //请求轮播数据
