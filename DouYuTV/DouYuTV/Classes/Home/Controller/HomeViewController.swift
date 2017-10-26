@@ -33,6 +33,7 @@ class HomeViewController: UIViewController {
         //将创建的控制器加到控制器数组中
         childVcs.append(RecommendViewController())
         childVcs.append(GameViewController())
+        childVcs.append(AmuseViewController())
         
         
         //随机设置颜色

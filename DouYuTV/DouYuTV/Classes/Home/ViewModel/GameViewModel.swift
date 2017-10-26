@@ -13,6 +13,7 @@
 import UIKit
 
 class GameViewModel {
+    //游戏数组
     lazy var games: [GameModel] = [GameModel]()
 
 }

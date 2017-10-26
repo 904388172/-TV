@@ -94,11 +94,6 @@ extension RecommendViewModel {
                 self.ancherGroups.append(group)
 
             }
-//            for group in self.ancherGroups {
-//                for ancher in group.anchers {
-////                    print(ancher.nickname)
-//                }
-//            }
             
             //离开组
             dGroup.leave()

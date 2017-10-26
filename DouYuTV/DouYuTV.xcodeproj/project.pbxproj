@@ -38,6 +38,9 @@
 		4451F2111FA0849200F89DE1 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4451F2101FA0849200F89DE1 /* GameViewModel.swift */; };
 		4451F2131FA086D200F89DE1 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4451F2121FA086D200F89DE1 /* GameModel.swift */; };
 		4451F2151FA0888900F89DE1 /* BaseGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4451F2141FA0888900F89DE1 /* BaseGameModel.swift */; };
+		446150161FA176420037EFF2 /* AmuseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446150151FA176420037EFF2 /* AmuseViewController.swift */; };
+		446150181FA1793A0037EFF2 /* AmuseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446150171FA1793A0037EFF2 /* AmuseViewModel.swift */; };
+		4461501A1FA17AAE0037EFF2 /* AmuseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446150191FA17AAE0037EFF2 /* AmuseModel.swift */; };
 		446B704E1F99D7030050353B /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446B704D1F99D7030050353B /* NetworkTools.swift */; };
 		446B70511F99D9A20050353B /* RecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446B70501F99D9A20050353B /* RecommendViewModel.swift */; };
 		446B70531F99DC930050353B /* NSDate-Externsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446B70521F99DC930050353B /* NSDate-Externsion.swift */; };
@@ -84,6 +87,9 @@
 		4451F2101FA0849200F89DE1 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		4451F2121FA086D200F89DE1 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		4451F2141FA0888900F89DE1 /* BaseGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseGameModel.swift; sourceTree = "<group>"; };
+		446150151FA176420037EFF2 /* AmuseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmuseViewController.swift; sourceTree = "<group>"; };
+		446150171FA1793A0037EFF2 /* AmuseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmuseViewModel.swift; sourceTree = "<group>"; };
+		446150191FA17AAE0037EFF2 /* AmuseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmuseModel.swift; sourceTree = "<group>"; };
 		446B704D1F99D7030050353B /* NetworkTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 		446B70501F99D9A20050353B /* RecommendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewModel.swift; sourceTree = "<group>"; };
 		446B70521F99DC930050353B /* NSDate-Externsion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate-Externsion.swift"; sourceTree = "<group>"; };
@@ -199,6 +205,7 @@
 				44495B661F982F61009FEE9E /* HomeViewController.swift */,
 				44495B731F988219009FEE9E /* RecommendViewController.swift */,
 				4451F20E1FA07E2300F89DE1 /* GameViewController.swift */,
+				446150151FA176420037EFF2 /* AmuseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -208,6 +215,7 @@
 			children = (
 				44DD68751F9EED97002FFA0D /* CycleModel.swift */,
 				4451F2121FA086D200F89DE1 /* GameModel.swift */,
+				446150191FA17AAE0037EFF2 /* AmuseModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -319,6 +327,7 @@
 			children = (
 				446B70501F99D9A20050353B /* RecommendViewModel.swift */,
 				4451F2101FA0849200F89DE1 /* GameViewModel.swift */,
+				446150171FA1793A0037EFF2 /* AmuseViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -484,6 +493,7 @@
 			files = (
 				44DD68721F9ED217002FFA0D /* RecommendCycleView.swift in Sources */,
 				44495B6A1F983062009FEE9E /* UIBarButton-Externsion.swift in Sources */,
+				446150181FA1793A0037EFF2 /* AmuseViewModel.swift in Sources */,
 				44495B771F9890E3009FEE9E /* CollectionHeaderView.swift in Sources */,
 				4451F2111FA0849200F89DE1 /* GameViewModel.swift in Sources */,
 				444D8CFA1F9750D900BB8453 /* AppDelegate.swift in Sources */,
@@ -496,6 +506,7 @@
 				4451F2131FA086D200F89DE1 /* GameModel.swift in Sources */,
 				4451F2151FA0888900F89DE1 /* BaseGameModel.swift in Sources */,
 				443B05911F9F31DF00E0EFE2 /* RecomendGameView.swift in Sources */,
+				446150161FA176420037EFF2 /* AmuseViewController.swift in Sources */,
 				44DD68761F9EED97002FFA0D /* CycleModel.swift in Sources */,
 				44495B701F9840CC009FEE9E /* PageContentView.swift in Sources */,
 				446B705B1F99EF010050353B /* AncherModel.swift in Sources */,
@@ -507,6 +518,7 @@
 				443B05961F9F3F3E00E0EFE2 /* CollectionGameCell.swift in Sources */,
 				446B704E1F99D7030050353B /* NetworkTools.swift in Sources */,
 				44495B671F982F61009FEE9E /* HomeViewController.swift in Sources */,
+				4461501A1FA17AAE0037EFF2 /* AmuseModel.swift in Sources */,
 				446B70511F99D9A20050353B /* RecommendViewModel.swift in Sources */,
 				446B70531F99DC930050353B /* NSDate-Externsion.swift in Sources */,
 			);

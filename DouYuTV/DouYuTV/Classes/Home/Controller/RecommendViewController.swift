@@ -26,6 +26,7 @@ class RecommendViewController: UIViewController {
     //MARK: - 懒加载属性
     private lazy var recomendVM: RecommendViewModel = RecommendViewModel()
     
+    //懒加载collectionView
     private lazy var collectionView: UICollectionView = {
         [weak self] in
         //创建布局
