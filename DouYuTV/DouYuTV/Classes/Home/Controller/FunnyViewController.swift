@@ -91,7 +91,7 @@ extension FunnyViewController {
             self.collectionView.reloadData()
             
             //处理数据
-            var tempGroups = self.funnyVM.funnyGroups
+            let tempGroups = self.funnyVM.funnyGroups
             //数据传给menuView
             self.menuView.groups = tempGroups
         }
