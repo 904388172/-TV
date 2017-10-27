@@ -51,6 +51,7 @@
 		446B70531F99DC930050353B /* NSDate-Externsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446B70521F99DC930050353B /* NSDate-Externsion.swift */; };
 		446B70571F99E0BD0050353B /* AnchorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446B70561F99E0BD0050353B /* AnchorGroup.swift */; };
 		446B705B1F99EF010050353B /* AncherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446B705A1F99EF010050353B /* AncherModel.swift */; };
+		448F36BD1FA2C22200046E9D /* FunnyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448F36BC1FA2C22200046E9D /* FunnyViewModel.swift */; };
 		44DD68701F9ECD23002FFA0D /* CollectionBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DD686F1F9ECD23002FFA0D /* CollectionBaseCell.swift */; };
 		44DD68721F9ED217002FFA0D /* RecommendCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DD68711F9ED217002FFA0D /* RecommendCycleView.swift */; };
 		44DD68741F9ED25B002FFA0D /* RecommendCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44DD68731F9ED25B002FFA0D /* RecommendCycleView.xib */; };
@@ -105,6 +106,7 @@
 		446B70521F99DC930050353B /* NSDate-Externsion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate-Externsion.swift"; sourceTree = "<group>"; };
 		446B70561F99E0BD0050353B /* AnchorGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorGroup.swift; sourceTree = "<group>"; };
 		446B705A1F99EF010050353B /* AncherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AncherModel.swift; sourceTree = "<group>"; };
+		448F36BC1FA2C22200046E9D /* FunnyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunnyViewModel.swift; sourceTree = "<group>"; };
 		44DD686F1F9ECD23002FFA0D /* CollectionBaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionBaseCell.swift; sourceTree = "<group>"; };
 		44DD68711F9ED217002FFA0D /* RecommendCycleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCycleView.swift; sourceTree = "<group>"; };
 		44DD68731F9ED25B002FFA0D /* RecommendCycleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendCycleView.xib; sourceTree = "<group>"; };
@@ -375,6 +377,7 @@
 				446B70501F99D9A20050353B /* RecommendViewModel.swift */,
 				4451F2101FA0849200F89DE1 /* GameViewModel.swift */,
 				446150171FA1793A0037EFF2 /* AmuseViewModel.swift */,
+				448F36BC1FA2C22200046E9D /* FunnyViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -573,6 +576,7 @@
 				4461501A1FA17AAE0037EFF2 /* AmuseModel.swift in Sources */,
 				446B70511F99D9A20050353B /* RecommendViewModel.swift in Sources */,
 				446B70531F99DC930050353B /* NSDate-Externsion.swift in Sources */,
+				448F36BD1FA2C22200046E9D /* FunnyViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

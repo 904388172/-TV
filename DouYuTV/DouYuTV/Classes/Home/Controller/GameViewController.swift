@@ -6,6 +6,10 @@
 //  Copyright © 2017年 Demo. All rights reserved.
 //
 
+/**
+     游戏界面
+ */
+
 import UIKit
 
 private let kEndgMargin: CGFloat = 10
@@ -16,7 +20,6 @@ private let kTopViewH: CGFloat = 90
 
 private let kGameCellID = "kGameCellID"
 private let kHeaderViewID = "kHeaderViewID"
-//private let kTopViewID = "kHeaderViewID"
 
 class GameViewController: UIViewController {
 

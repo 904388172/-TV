@@ -24,6 +24,16 @@ class AncherModel: NSObject {
     @objc var online: Int = 0
     //所在城市
     @objc var anchor_city: String = ""
+    //游戏类型图片地址
+    @objc var game_url: String = ""
+    //游戏类型
+    @objc var game_name: String = ""
+    
+    //重写构造函数
+    override init() {
+        super.init()
+        
+    }
     
     init(dict: [String : NSObject]) {
         super.init()

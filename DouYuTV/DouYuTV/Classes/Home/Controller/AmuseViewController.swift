@@ -6,6 +6,9 @@
 //  Copyright © 2017年 Demo. All rights reserved.
 //
 
+/**
+     娱乐界面
+ */
 import UIKit
 
 //MARK: - 定义常量
@@ -47,7 +50,6 @@ class AmuseViewController: UIViewController {
         
         //代理
         collectionView.dataSource = self
-//        collectionView.delegate = self
         
         //注册cell（普通）
         collectionView.register(UINib(nibName: "CollectionNormalCell", bundle: nil), forCellWithReuseIdentifier: kNormalCellID)
@@ -92,16 +94,10 @@ extension AmuseViewController {
         amuseVM.requestAmuseData {
             self.collectionView.reloadData()
             
-            
             //处理数据(删除最热)
             var tempGroups = self.amuseVM.amuses
-            tempGroups.append(tempGroups.first!)
-            tempGroups.append(tempGroups.first!)
-            tempGroups.append(tempGroups.first!)
-            tempGroups.append(tempGroups.first!)
-            tempGroups.append(tempGroups.first!)
-            
             tempGroups.removeFirst()
+            
             //数据传给menuView
             self.menuView.groups = tempGroups
         }

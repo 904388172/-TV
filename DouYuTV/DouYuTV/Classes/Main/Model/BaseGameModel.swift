@@ -15,6 +15,7 @@ class BaseGameModel: NSObject {
     //游戏对应图片的url
     @objc var icon_url: String = ""
     
+    
     //重写构造函数
     override init() {
     }

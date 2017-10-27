@@ -6,6 +6,10 @@
 //  Copyright © 2017年 Demo. All rights reserved.
 //
 
+/**
+     推荐界面
+ */
+
 import UIKit
 
 //MARK: - 定义常量
