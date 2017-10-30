@@ -22,7 +22,7 @@ private let kNormalCellID = "kNormalCellID"
 private let kPrettyCellID = "kPrettyCellID"
 private let kHeaderViewID = "kHeaderViewID"
 
-class AmuseViewController: UIViewController {
+class AmuseViewController: BaseViewController {
 
     private lazy var amuseVM: AmuseViewModel = AmuseViewModel()
     
@@ -79,13 +79,40 @@ class AmuseViewController: UIViewController {
         
         //发送网络请求
         loadData()
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    //MARK: - 由于继承的有基类的视线方法，所以必须写在这里面不能写在extension里面
+    override func setUpUI() {
+        //1.先给父类中内容view的引用进行赋值
+        contentView = collectionView
+        
+        //2.添加UI
+        addUI()
+        
+        //3.调用super.setUpUI()
+        super.setUpUI()
+        
+    }
 }
+
+//MARK: - 添加UI界面
+extension AmuseViewController {
+    func addUI() {
+        
+        //
+        view.addSubview(collectionView)
+        
+        //menuView添加到collectionView
+        collectionView.addSubview(menuView)
+    }
+}
+
 //MARK: - 请求数据
 extension AmuseViewController {
     private func loadData() {
@@ -100,18 +127,10 @@ extension AmuseViewController {
             
             //数据传给menuView
             self.menuView.groups = tempGroups
+            
+            //MARK: - 调用父类的数据请求完成
+            self.loadDataFinish()
         }
-    }
-}
-
-//MARK: - 设置UI界面
-extension AmuseViewController {
-    func setUpUI() {
-        //
-        view.addSubview(collectionView)
-        
-        //menuView添加到collectionView
-        collectionView.addSubview(menuView)
     }
 }
 

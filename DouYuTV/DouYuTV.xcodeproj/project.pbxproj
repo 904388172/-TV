@@ -51,6 +51,7 @@
 		446B70531F99DC930050353B /* NSDate-Externsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446B70521F99DC930050353B /* NSDate-Externsion.swift */; };
 		446B70571F99E0BD0050353B /* AnchorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446B70561F99E0BD0050353B /* AnchorGroup.swift */; };
 		446B705B1F99EF010050353B /* AncherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446B705A1F99EF010050353B /* AncherModel.swift */; };
+		44782B631FA32B700018A02B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44782B621FA32B700018A02B /* BaseViewController.swift */; };
 		448F36BD1FA2C22200046E9D /* FunnyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448F36BC1FA2C22200046E9D /* FunnyViewModel.swift */; };
 		44DD68701F9ECD23002FFA0D /* CollectionBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DD686F1F9ECD23002FFA0D /* CollectionBaseCell.swift */; };
 		44DD68721F9ED217002FFA0D /* RecommendCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DD68711F9ED217002FFA0D /* RecommendCycleView.swift */; };
@@ -106,6 +107,7 @@
 		446B70521F99DC930050353B /* NSDate-Externsion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate-Externsion.swift"; sourceTree = "<group>"; };
 		446B70561F99E0BD0050353B /* AnchorGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorGroup.swift; sourceTree = "<group>"; };
 		446B705A1F99EF010050353B /* AncherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AncherModel.swift; sourceTree = "<group>"; };
+		44782B621FA32B700018A02B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		448F36BC1FA2C22200046E9D /* FunnyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunnyViewModel.swift; sourceTree = "<group>"; };
 		44DD686F1F9ECD23002FFA0D /* CollectionBaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionBaseCell.swift; sourceTree = "<group>"; };
 		44DD68711F9ED217002FFA0D /* RecommendCycleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCycleView.swift; sourceTree = "<group>"; };
@@ -317,6 +319,7 @@
 			children = (
 				444D8D1B1F9753A100BB8453 /* Main.storyboard */,
 				444D8D1E1F9753BA00BB8453 /* MainViewController.swift */,
+				44782B621FA32B700018A02B /* BaseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -548,6 +551,7 @@
 				4445DB661FA1C74B004361DB /* MenuView.swift in Sources */,
 				446150181FA1793A0037EFF2 /* AmuseViewModel.swift in Sources */,
 				44495B771F9890E3009FEE9E /* CollectionHeaderView.swift in Sources */,
+				44782B631FA32B700018A02B /* BaseViewController.swift in Sources */,
 				4451F2111FA0849200F89DE1 /* GameViewModel.swift in Sources */,
 				444D8CFA1F9750D900BB8453 /* AppDelegate.swift in Sources */,
 				4451F20F1FA07E2300F89DE1 /* GameViewController.swift in Sources */,

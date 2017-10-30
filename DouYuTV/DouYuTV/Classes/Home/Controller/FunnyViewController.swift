@@ -23,7 +23,7 @@ private let kNormalCellID = "kNormalCellID"
 private let kHeaderViewID = "kHeaderViewID"
 
 //和娱乐界面一样(后面看能否单独抽出一个基类来)
-class FunnyViewController: UIViewController {
+class FunnyViewController: BaseViewController {
 
     private lazy var funnyVM: FunnyViewModel = FunnyViewModel()
     
@@ -80,6 +80,20 @@ class FunnyViewController: UIViewController {
         
         //发送网络请求
         loadData()
+    
+    }
+    
+    //MARK: - 由于继承的有基类的视线方法，所以必须写在这里面不能写在extension里面
+    override func setUpUI() {
+        //1.先给父类中内容view的引用进行赋值
+        contentView = collectionView
+        
+        //2.添加UI
+        addUI()
+        
+        //3.调用super.setUpUI()
+        super.setUpUI()
+        
     }
 }
 //MARK: - 请求数据
@@ -94,13 +108,18 @@ extension FunnyViewController {
             let tempGroups = self.funnyVM.funnyGroups
             //数据传给menuView
             self.menuView.groups = tempGroups
+            
+            //MARK: - 调用父类的数据请求完成
+            self.loadDataFinish()
         }
     }
 }
 
-//MARK: - 设置UI界面
+//MARK: - 添加UI界面
 extension FunnyViewController {
-    func setUpUI() {
+    
+    func addUI() {
+    
         //
         view.addSubview(collectionView)
         

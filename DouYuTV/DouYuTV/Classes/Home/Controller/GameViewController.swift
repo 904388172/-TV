@@ -21,7 +21,7 @@ private let kTopViewH: CGFloat = 90
 private let kGameCellID = "kGameCellID"
 private let kHeaderViewID = "kHeaderViewID"
 
-class GameViewController: UIViewController {
+class GameViewController: BaseViewController {
 
     //MARK: - 懒加载属性
     fileprivate lazy var gameVM: GameViewModel = GameViewModel()
@@ -89,16 +89,31 @@ class GameViewController: UIViewController {
         
         //设置UI
         setUpUI()
+       
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    //MARK: - 由于继承的有基类的视线方法，所以必须写在这里面不能写在extension里面
+    override func setUpUI() {
+        //1.先给父类中内容view的引用进行赋值
+        contentView = collectionView
+        
+        //2.添加UI
+        addUI()
+        
+        //3.调用super.setUpUI()
+        super.setUpUI()
+        
+    }
 }
 
-//MARK: - 设置UI
+//MARK: - 添加UI界面
 extension GameViewController {
-    func setUpUI() {
+    func addUI() {
+    
         view.addSubview(collectionView)
         
         //1.加载数据
@@ -125,6 +140,9 @@ extension GameViewController {
             //展示常用游戏(全部游戏的前十条)  取一个数组的区间，然后转成数组
             let groups = self.gameVM.games[0..<10]
             self.topView.groups = Array(groups)
+            
+            //MARK: - 调用父类的数据请求完成
+            self.loadDataFinish()
         }
     }
 }

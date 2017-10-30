@@ -25,7 +25,7 @@ private let kNormalCellID = "kNormalCellID"
 private let kPrettyCellID = "kPrettyCellID"
 private let kHeaderViewID = "kHeaderViewID"
 
-class RecommendViewController: UIViewController {
+class RecommendViewController: BaseViewController {
 
     //MARK: - 懒加载属性
     private lazy var recomendVM: RecommendViewModel = RecommendViewModel()
@@ -98,6 +98,36 @@ class RecommendViewController: UIViewController {
         //发送网络请求
         loadData()
     }
+    
+    //MARK: - 由于继承的有基类的视线方法，所以必须写在这里面不能写在extension里面
+    override func setUpUI() {
+        //1.先给父类中内容view的引用进行赋值
+        contentView = collectionView
+        
+        //2.添加UI
+        addUI()
+        
+        //3.调用super.setUpUI()
+        super.setUpUI()
+
+    }
+}
+
+//MARK: - 添加UI界面
+extension RecommendViewController {
+    func addUI() {
+        //1.将UICollectionView添加到控制器中
+        view.addSubview(collectionView)
+
+        //2.将cycleView添加到collectionView中
+        collectionView.addSubview(cycleView)
+
+        //3.将gameView添加到collectionView中
+        collectionView.addSubview(gameView)
+
+        //4.设置collectionView的内边距
+        collectionView.contentInset = UIEdgeInsetsMake(kCycleViewH + kGameViewH, 0, 0, 0)
+    }
 }
 
 //MARK: - 请求数据
@@ -120,29 +150,15 @@ extension RecommendViewController {
             groups.append(moreGroup)
             
             self.gameView.groups = groups
+            
+            //MARK: - 调用父类的数据请求完成
+            self.loadDataFinish()
         }
         
         //请求轮播数据
         recomendVM.requestCycleData {
             self.cycleView.cycleModels = self.recomendVM.cycleModels
         }
-    }
-}
-
-//MARK: - 设置UI界面
-extension RecommendViewController {
-    private func setUpUI() {
-        //1.将UICollectionView添加到控制器中
-        view.addSubview(collectionView)
-        
-        //2.将cycleView添加到collectionView中
-        collectionView.addSubview(cycleView)
-        
-        //3.将gameView添加到collectionView中
-        collectionView.addSubview(gameView)
-        
-        //4.设置collectionView的内边距
-        collectionView.contentInset = UIEdgeInsetsMake(kCycleViewH + kGameViewH, 0, 0, 0)
     }
 }
 
