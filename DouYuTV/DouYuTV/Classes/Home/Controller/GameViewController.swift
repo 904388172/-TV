@@ -53,6 +53,7 @@ class GameViewController: BaseViewController {
         collectionView.register(UINib(nibName: "CollectionGameCell", bundle: nil), forCellWithReuseIdentifier: kGameCellID)
         
         collectionView.dataSource = self
+        collectionView.delegate = self
         collectionView.showsVerticalScrollIndicator = false
         
         //注册头部headerView
@@ -179,6 +180,19 @@ extension GameViewController: UICollectionViewDataSource {
     }
 }
 
+//MARK: - 遵守UICollectonView的协议
+extension GameViewController:  UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("点击了\(indexPath.item)")
+//        //先取出主播信息
+//        let anchor = gameVM.games[indexPath.section].a.anchers[indexPath.item]
+//        
+//        //判断时秀场房间还是普通房间(调用基类的跳转)
+//        //anchor.isVertical == 0 ? 普通房间 : 秀场房间
+//        anchor.isVertical == 0 ? pushNormalRoomVC() : presentShowRoomVC()
+        
+    }
+}
 
 
 

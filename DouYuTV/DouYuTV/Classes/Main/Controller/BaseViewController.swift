@@ -71,5 +71,23 @@ class BaseViewController: UIViewController {
         //3.显示内容的view
         contentView?.isHidden = false
     }
+    
+    //MARK: - 跳转到秀场房间
+    func presentShowRoomVC() {
+        //创建vc
+        let showRoomVC = RoomShowViewController()
+        
+        //以model的方式弹出
+        present(showRoomVC, animated: true, completion: nil)
+    }
+    
+    //MARK: - 跳转到普通房间
+    func pushNormalRoomVC() {
+        //创建vc
+        let normalRoomVC = RoomNormalViewController()
+        
+        //以push的方式弹出
+        navigationController?.pushViewController(normalRoomVC, animated: true)
+    }
 }
 

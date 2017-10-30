@@ -50,6 +50,7 @@ class AmuseViewController: BaseViewController {
         
         //代理
         collectionView.dataSource = self
+        collectionView.delegate = self
         
         //注册cell（普通）
         collectionView.register(UINib(nibName: "CollectionNormalCell", bundle: nil), forCellWithReuseIdentifier: kNormalCellID)
@@ -164,7 +165,18 @@ extension AmuseViewController: UICollectionViewDataSource {
     }
 }
 
-
+//MARK: - 遵守UICollectonView的协议
+extension AmuseViewController:  UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //先取出主播信息
+        let anchor = amuseVM.amuses[indexPath.section].anchers[indexPath.item]
+        
+        //判断时秀场房间还是普通房间(调用基类的跳转)
+        //anchor.isVertical == 0 ? 普通房间 : 秀场房间
+        anchor.isVertical == 0 ? pushNormalRoomVC() : presentShowRoomVC()
+        
+    }
+}
 
 
 

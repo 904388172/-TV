@@ -222,6 +222,19 @@ extension RecommendViewController: UICollectionViewDataSource, UICollectionViewD
     }
 }
 
+//MARK: - 遵守UICollectonView的协议
+extension RecommendViewController:  UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        //先取出主播信息
+        let anchor = recomendVM.ancherGroups[indexPath.section].anchers[indexPath.item]
+        
+        //判断时秀场房间还是普通房间(调用基类的跳转)
+        //anchor.isVertical == 0 ? 普通房间 : 秀场房间
+        anchor.isVertical == 0 ? pushNormalRoomVC() : presentShowRoomVC()
+        
+    }
+}
 
 
 

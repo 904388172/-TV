@@ -27,7 +27,7 @@
                     </collectionViewFlowLayout>
                     <connections>
                         <outlet property="dataSource" destination="iN0-l3-epB" id="JOX-UM-X5h"/>
-                        <outlet property="delegate" destination="iN0-l3-epB" id="Xb3-pe-7KL"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="ugy-Od-hFy"/>
                     </connections>
                 </collectionView>
             </subviews>

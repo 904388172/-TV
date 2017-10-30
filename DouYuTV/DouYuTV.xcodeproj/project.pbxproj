@@ -46,6 +46,9 @@
 		446150161FA176420037EFF2 /* AmuseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446150151FA176420037EFF2 /* AmuseViewController.swift */; };
 		446150181FA1793A0037EFF2 /* AmuseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446150171FA1793A0037EFF2 /* AmuseViewModel.swift */; };
 		4461501A1FA17AAE0037EFF2 /* AmuseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446150191FA17AAE0037EFF2 /* AmuseModel.swift */; };
+		4462A6601FA6CF24009438E7 /* RoomShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4462A65F1FA6CF24009438E7 /* RoomShowViewController.swift */; };
+		4462A6621FA6CF59009438E7 /* RoomNormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4462A6611FA6CF59009438E7 /* RoomNormalViewController.swift */; };
+		4462A6641FA6D38B009438E7 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4462A6631FA6D38B009438E7 /* CustomNavigationController.swift */; };
 		446B704E1F99D7030050353B /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446B704D1F99D7030050353B /* NetworkTools.swift */; };
 		446B70511F99D9A20050353B /* RecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446B70501F99D9A20050353B /* RecommendViewModel.swift */; };
 		446B70531F99DC930050353B /* NSDate-Externsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446B70521F99DC930050353B /* NSDate-Externsion.swift */; };
@@ -102,6 +105,9 @@
 		446150151FA176420037EFF2 /* AmuseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmuseViewController.swift; sourceTree = "<group>"; };
 		446150171FA1793A0037EFF2 /* AmuseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmuseViewModel.swift; sourceTree = "<group>"; };
 		446150191FA17AAE0037EFF2 /* AmuseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmuseModel.swift; sourceTree = "<group>"; };
+		4462A65F1FA6CF24009438E7 /* RoomShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomShowViewController.swift; sourceTree = "<group>"; };
+		4462A6611FA6CF59009438E7 /* RoomNormalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomNormalViewController.swift; sourceTree = "<group>"; };
+		4462A6631FA6D38B009438E7 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		446B704D1F99D7030050353B /* NetworkTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 		446B70501F99D9A20050353B /* RecommendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewModel.swift; sourceTree = "<group>"; };
 		446B70521F99DC930050353B /* NSDate-Externsion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate-Externsion.swift"; sourceTree = "<group>"; };
@@ -206,6 +212,7 @@
 		444D8D0B1F97537600BB8453 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				4462A65B1FA6CF03009438E7 /* Room */,
 				4445DB611FA1BC75004361DB /* Find */,
 				444D8D121F97537600BB8453 /* Live */,
 				444D8D141F97537600BB8453 /* Main */,
@@ -320,6 +327,7 @@
 				444D8D1B1F9753A100BB8453 /* Main.storyboard */,
 				444D8D1E1F9753BA00BB8453 /* MainViewController.swift */,
 				44782B621FA32B700018A02B /* BaseViewController.swift */,
+				4462A6631FA6D38B009438E7 /* CustomNavigationController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -372,6 +380,39 @@
 				44495B6D1F98349D009FEE9E /* Common.swift */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		4462A65B1FA6CF03009438E7 /* Room */ = {
+			isa = PBXGroup;
+			children = (
+				4462A65C1FA6CF03009438E7 /* Controller */,
+				4462A65D1FA6CF03009438E7 /* Model */,
+				4462A65E1FA6CF03009438E7 /* View */,
+			);
+			path = Room;
+			sourceTree = "<group>";
+		};
+		4462A65C1FA6CF03009438E7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4462A65F1FA6CF24009438E7 /* RoomShowViewController.swift */,
+				4462A6611FA6CF59009438E7 /* RoomNormalViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4462A65D1FA6CF03009438E7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4462A65E1FA6CF03009438E7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		446B704F1F99D9730050353B /* ViewModel */ = {
@@ -575,11 +616,14 @@
 				44DD68701F9ECD23002FFA0D /* CollectionBaseCell.swift in Sources */,
 				44495B7B1F98954F009FEE9E /* CollectionNormalCell.swift in Sources */,
 				443B05961F9F3F3E00E0EFE2 /* CollectionGameCell.swift in Sources */,
+				4462A6621FA6CF59009438E7 /* RoomNormalViewController.swift in Sources */,
 				446B704E1F99D7030050353B /* NetworkTools.swift in Sources */,
 				44495B671F982F61009FEE9E /* HomeViewController.swift in Sources */,
 				4461501A1FA17AAE0037EFF2 /* AmuseModel.swift in Sources */,
+				4462A6601FA6CF24009438E7 /* RoomShowViewController.swift in Sources */,
 				446B70511F99D9A20050353B /* RecommendViewModel.swift in Sources */,
 				446B70531F99DC930050353B /* NSDate-Externsion.swift in Sources */,
+				4462A6641FA6D38B009438E7 /* CustomNavigationController.swift in Sources */,
 				448F36BD1FA2C22200046E9D /* FunnyViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

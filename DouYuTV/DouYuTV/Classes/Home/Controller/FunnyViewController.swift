@@ -51,8 +51,8 @@ class FunnyViewController: BaseViewController {
         
         //代理
         collectionView.dataSource = self
-        //        collectionView.delegate = self
-                
+        collectionView.delegate = self
+        
         //注册cell（普通）
         collectionView.register(UINib(nibName: "CollectionNormalCell", bundle: nil), forCellWithReuseIdentifier: kNormalCellID)
         //使用Xib注册headerView
@@ -159,3 +159,15 @@ extension FunnyViewController: UICollectionViewDataSource {
     }
 }
 
+//MARK: - 遵守UICollectonView的协议
+extension FunnyViewController:  UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //先取出主播信息
+        let anchor = funnyVM.funnyGroups[indexPath.section].anchers[indexPath.item]
+        
+        //判断时秀场房间还是普通房间(调用基类的跳转)
+        //anchor.isVertical == 0 ? 普通房间 : 秀场房间
+        anchor.isVertical == 0 ? pushNormalRoomVC() : presentShowRoomVC()
+        
+    }
+}
